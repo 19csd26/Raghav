@@ -1,244 +1,1178 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="img/favicon.png" type="image/png">
-        <title>Raghav</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="vendors/linericon/style.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
-        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-        <link rel="stylesheet" href="vendors/animate-css/animate.css">
-        <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
-        <link rel="stylesheet" href="vendors/flaticon/flaticon.css">
-        <!-- main css -->
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
-    </head>
-    <body>
-        
-        <!--================Header Menu Area =================-->
-<header class="header_area">
-	<div class="main_menu">
-      	<nav class="navbar navbar-expand-lg navbar-light">
-	<div class="container box_1620">
-	<!-- Brand and toggle get grouped for better mobile display -->
-<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-</button>
-	<!-- Collect the nav links, forms, and other content for toggling -->
-	<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-		<ul class="nav navbar-nav menu_nav ml-auto">
-		<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
-		<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li> 
-		<li class="nav-item"><a class="nav-link" href="contact.html">Hire Me</a></li>
-							</ul>
-						</div> 
-					</div>
-            	</nav>
-            </div>
-        </header>
-        <!--================Header Menu Area =================-->
-        
-        <!--================Home Banner Area =================-->     
-<section class="home_banner_area">
-	<div class="container box_1620">
-       		<div class="banner_inner d-flex align-items-center">
-			<div class="banner_content">
-				<div class="media">
-					<div class="d-flex">
-		 				<img src="img/personal.jpg" alt="">
-					</div>
-						<div class="media-body">
-							<div class="personal_text">
-								<h6>Hello Everybody, i am</h6>
-								<h3>Raghav Kumar Singh</h3>
-								<h4>Core Java & Web Developer</h4>
-					<p>I am a hard working, honest individual. I am a good timekeeper, always willing to learn new skills.</p>
-							<ul class="list basic_info">
-								<li><a href="#"><i class="lnr lnr-calendar-full"></i> 13th June, 2002</a></li>
-								<li><a href="#"><i class="lnr lnr-phone-handset"></i>+91-6203929429</a></li>
-								<li><a href="#"><i class="lnr lnr-envelope"></i>raghav.19csd26@citranchi.ac.in</a></li>
-								<li><a href="#"><i class="lnr lnr-home"></i> Ranchi,Jharkhand</a></li>
-							</ul>
-				<ul class="list personal_social">
-				<li><a href="https://www.facebook.com/profile.php?id=100035442340828"><i class="fa fa-facebook"></i></a></li>
-				<li><a href="https://twitter.com/MrRaghavKumar"><i class="fa fa-twitter"></i></a></li>
-				<li><a href="https://www.linkedin.com/in/raghav-kumar-singh-039a17242/"><i class="fa fa-linkedin"></i></a></li>
-				</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-       	 </div>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Raghav Kumar Singh — Backend Engineer</title>
+<meta name="description" content="Backend Software Engineer specializing in Ruby on Rails, EV Charging Infrastructure, REST APIs, and Payment Systems." />
+<link rel="icon" href="img/favicon.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+/* ─── RESET & BASE ──────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'Syne',sans-serif;
+  background:#060a0f;
+  color:#e2e8f0;
+  overflow-x:hidden;
+  cursor:none;
+}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+img{max-width:100%;display:block}
+
+/* ─── CUSTOM CURSOR ─────────────────────────────────────── */
+#cursor{
+  position:fixed;width:12px;height:12px;
+  background:#00ff88;border-radius:50%;
+  pointer-events:none;z-index:9999;
+  transform:translate(-50%,-50%);
+  transition:transform 0.1s,width 0.2s,height 0.2s,opacity 0.2s;
+  mix-blend-mode:screen;
+}
+#cursor-ring{
+  position:fixed;width:36px;height:36px;
+  border:1.5px solid rgba(0,255,136,0.4);
+  border-radius:50%;pointer-events:none;z-index:9998;
+  transform:translate(-50%,-50%);
+  transition:transform 0.12s ease-out,width 0.2s,height 0.2s,opacity 0.2s;
+}
+body:has(a:hover) #cursor,body:has(button:hover) #cursor{width:20px;height:20px}
+
+/* ─── NOISE OVERLAY ─────────────────────────────────────── */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:1;opacity:0.35;
+}
+
+/* ─── GRID BACKGROUND ───────────────────────────────────── */
+body::after{
+  content:'';position:fixed;inset:0;
+  background-image:
+    linear-gradient(rgba(0,255,136,0.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,255,136,0.03) 1px,transparent 1px);
+  background-size:60px 60px;
+  pointer-events:none;z-index:0;
+}
+
+/* ─── SCROLLBAR ─────────────────────────────────────────── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:#060a0f}
+::-webkit-scrollbar-thumb{background:#00ff88;border-radius:2px}
+
+/* ─── NAV ───────────────────────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 3rem;
+  background:rgba(6,10,15,0.85);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(0,255,136,0.08);
+  transition:all 0.3s;
+}
+nav.scrolled{padding:0.8rem 3rem;background:rgba(6,10,15,0.97)}
+.nav-logo{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.9rem;color:#00ff88;
+  letter-spacing:0.05em;
+}
+.nav-logo span{color:#64748b}
+.nav-links{display:flex;gap:2.5rem;align-items:center}
+.nav-links a{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.78rem;color:#64748b;
+  letter-spacing:0.1em;text-transform:uppercase;
+  transition:color 0.2s;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;
+  width:0;height:1px;background:#00ff88;
+  transition:width 0.3s;
+}
+.nav-links a:hover{color:#00ff88}
+.nav-links a:hover::after{width:100%}
+.nav-cta{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.78rem;padding:0.5rem 1.2rem;
+  border:1px solid #00ff88;color:#00ff88;
+  border-radius:2px;letter-spacing:0.1em;
+  text-transform:uppercase;
+  transition:background 0.2s,color 0.2s;
+  cursor:none;
+}
+.nav-cta:hover{background:#00ff88;color:#060a0f}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:none;padding:4px}
+.hamburger span{width:22px;height:2px;background:#00ff88;transition:all 0.3s}
+
+/* ─── HERO ──────────────────────────────────────────────── */
+#hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:8rem 3rem 4rem;
+  position:relative;z-index:2;
+}
+.hero-inner{max-width:1200px;margin:0 auto;width:100%}
+.hero-eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.8rem;color:#00ff88;
+  letter-spacing:0.25em;text-transform:uppercase;
+  margin-bottom:1.5rem;
+  display:flex;align-items:center;gap:0.8rem;
+}
+.hero-eyebrow::before{
+  content:'';width:40px;height:1px;background:#00ff88;
+}
+.hero-name{
+  font-size:clamp(3rem,8vw,7rem);
+  font-weight:800;line-height:0.95;
+  letter-spacing:-0.03em;
+  margin-bottom:1.5rem;
+}
+.hero-name .line2{
+  -webkit-text-stroke:1px rgba(0,255,136,0.4);
+  color:transparent;
+}
+.hero-title{
+  font-family:'JetBrains Mono',monospace;
+  font-size:clamp(0.85rem,1.5vw,1.1rem);
+  color:#64748b;margin-bottom:2rem;
+  display:flex;align-items:center;gap:0.5rem;
+}
+.hero-title .blink{
+  display:inline-block;width:10px;height:1.1em;
+  background:#00ff88;animation:blink 1s step-end infinite;
+  vertical-align:middle;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hero-desc{
+  max-width:560px;
+  font-size:1.05rem;line-height:1.75;
+  color:#94a3b8;margin-bottom:3rem;
+}
+.hero-desc strong{color:#e2e8f0;font-weight:600}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.82rem;letter-spacing:0.1em;
+  text-transform:uppercase;padding:0.85rem 2rem;
+  background:#00ff88;color:#060a0f;
+  border:none;border-radius:2px;cursor:none;
+  font-weight:700;transition:all 0.2s;
+  display:inline-flex;align-items:center;gap:0.5rem;
+}
+.btn-primary:hover{background:#00cc6a;transform:translateY(-2px)}
+.btn-secondary{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.82rem;letter-spacing:0.1em;
+  text-transform:uppercase;padding:0.85rem 2rem;
+  background:transparent;color:#00ff88;
+  border:1px solid rgba(0,255,136,0.4);
+  border-radius:2px;cursor:none;
+  transition:all 0.2s;
+  display:inline-flex;align-items:center;gap:0.5rem;
+}
+.btn-secondary:hover{border-color:#00ff88;background:rgba(0,255,136,0.05);transform:translateY(-2px)}
+.hero-stats{
+  display:flex;gap:3rem;margin-top:4rem;
+  padding-top:3rem;border-top:1px solid rgba(255,255,255,0.06);
+}
+.stat-item{display:flex;flex-direction:column;gap:0.3rem}
+.stat-num{
+  font-size:2.5rem;font-weight:800;
+  color:#00ff88;line-height:1;
+}
+.stat-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.72rem;color:#475569;
+  letter-spacing:0.1em;text-transform:uppercase;
+}
+.hero-scroll{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:0.5rem;
+  font-family:'JetBrains Mono',monospace;font-size:0.65rem;
+  color:#334155;letter-spacing:0.2em;text-transform:uppercase;
+  animation:float 2s ease-in-out infinite;
+}
+.hero-scroll::after{
+  content:'';width:1px;height:40px;background:linear-gradient(to bottom,#00ff88,transparent);
+}
+@keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-6px)}}
+
+/* ─── TERMINAL BLOCK ────────────────────────────────────── */
+.terminal{
+  background:#0d1117;border:1px solid rgba(0,255,136,0.15);
+  border-radius:8px;overflow:hidden;
+  box-shadow:0 0 60px rgba(0,255,136,0.05);
+}
+.terminal-bar{
+  background:#161b22;padding:0.75rem 1rem;
+  display:flex;align-items:center;gap:0.5rem;
+  border-bottom:1px solid rgba(0,255,136,0.08);
+}
+.t-dot{width:12px;height:12px;border-radius:50%}
+.t-dot.r{background:#ff5f57}
+.t-dot.y{background:#febc2e}
+.t-dot.g{background:#28c840}
+.t-title{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.72rem;color:#475569;
+  margin-left:0.5rem;letter-spacing:0.05em;
+}
+.terminal-body{padding:1.5rem;font-family:'JetBrains Mono',monospace;font-size:0.82rem;line-height:1.8}
+.t-line{display:block}
+.t-prompt{color:#00ff88}
+.t-cmd{color:#e2e8f0}
+.t-comment{color:#475569}
+.t-key{color:#79c0ff}
+.t-val{color:#ffa657}
+.t-str{color:#a5d6ff}
+.t-green{color:#7ee787}
+
+/* ─── SECTIONS ──────────────────────────────────────────── */
+section{padding:7rem 3rem;position:relative;z-index:2}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.72rem;color:#00ff88;
+  letter-spacing:0.3em;text-transform:uppercase;
+  margin-bottom:1rem;
+  display:flex;align-items:center;gap:0.8rem;
+}
+.section-label::before{content:'//';color:#334155}
+.section-title{
+  font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:800;letter-spacing:-0.02em;
+  line-height:1.1;margin-bottom:1rem;
+}
+.section-sub{
+  color:#64748b;font-size:1rem;line-height:1.7;
+  max-width:540px;margin-bottom:4rem;
+}
+.divider{
+  width:100%;height:1px;
+  background:linear-gradient(to right,rgba(0,255,136,0.2),transparent);
+  margin-bottom:5rem;
+}
+
+/* ─── ABOUT ─────────────────────────────────────────────── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.about-text p{
+  color:#94a3b8;line-height:1.85;
+  margin-bottom:1.5rem;font-size:1rem;
+}
+.about-text p strong{color:#e2e8f0}
+.about-tags{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:2rem}
+.tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.72rem;padding:0.35rem 0.8rem;
+  border:1px solid rgba(0,255,136,0.2);
+  border-radius:2px;color:#00ff88;
+  letter-spacing:0.05em;
+  background:rgba(0,255,136,0.04);
+  transition:all 0.2s;
+}
+.tag:hover{background:rgba(0,255,136,0.1);border-color:#00ff88}
+.about-right{display:flex;flex-direction:column;gap:1.5rem}
+
+/* ─── SKILLS ────────────────────────────────────────────── */
+#skills{background:rgba(0,255,136,0.01);border-top:1px solid rgba(0,255,136,0.06);border-bottom:1px solid rgba(0,255,136,0.06)}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.skill-card{
+  background:#0d1117;border:1px solid rgba(0,255,136,0.1);
+  border-radius:6px;padding:2rem;
+  transition:all 0.3s;position:relative;overflow:hidden;
+}
+.skill-card::before{
+  content:'';position:absolute;top:0;left:0;
+  width:100%;height:2px;
+  background:linear-gradient(to right,#00ff88,transparent);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.3s;
+}
+.skill-card:hover::before{transform:scaleX(1)}
+.skill-card:hover{border-color:rgba(0,255,136,0.3);transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+.skill-icon{
+  width:44px;height:44px;
+  background:rgba(0,255,136,0.08);
+  border-radius:4px;display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.2rem;font-size:1.3rem;
+}
+.skill-card h3{
+  font-size:1rem;font-weight:700;margin-bottom:0.5rem;letter-spacing:0.01em;
+}
+.skill-card p{font-size:0.83rem;color:#64748b;line-height:1.6}
+.skill-pills{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+.pill{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.65rem;padding:0.2rem 0.55rem;
+  background:rgba(0,255,136,0.06);
+  border:1px solid rgba(0,255,136,0.15);
+  border-radius:2px;color:#4ade80;
+  letter-spacing:0.04em;
+}
+
+/* ─── EXPERIENCE ────────────────────────────────────────── */
+.exp-layout{display:grid;grid-template-columns:200px 1fr;gap:4rem}
+.exp-tabs{display:flex;flex-direction:column;gap:0}
+.exp-tab{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.78rem;letter-spacing:0.05em;
+  padding:1rem 1.2rem;cursor:none;
+  color:#475569;border-left:2px solid rgba(255,255,255,0.06);
+  transition:all 0.2s;text-align:left;background:none;border-right:none;border-top:none;border-bottom:none;
+}
+.exp-tab:hover{color:#94a3b8;border-left-color:rgba(0,255,136,0.3)}
+.exp-tab.active{color:#00ff88;border-left-color:#00ff88;background:rgba(0,255,136,0.04)}
+.exp-panel{display:none}
+.exp-panel.active{display:block}
+.exp-company{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.72rem;color:#00ff88;
+  letter-spacing:0.1em;text-transform:uppercase;
+  margin-bottom:0.4rem;
+}
+.exp-role{font-size:1.4rem;font-weight:700;margin-bottom:0.3rem}
+.exp-period{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.72rem;color:#475569;
+  letter-spacing:0.05em;margin-bottom:1.5rem;
+}
+.exp-points{display:flex;flex-direction:column;gap:0.9rem}
+.exp-point{
+  display:flex;gap:0.8rem;align-items:flex-start;
+  font-size:0.93rem;color:#94a3b8;line-height:1.65;
+}
+.exp-point::before{
+  content:'▸';color:#00ff88;
+  font-size:0.8rem;margin-top:0.15rem;flex-shrink:0;
+}
+.exp-point strong{color:#e2e8f0;font-weight:600}
+
+/* ─── PROJECTS ──────────────────────────────────────────── */
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.project-card{
+  background:#0d1117;border:1px solid rgba(0,255,136,0.1);
+  border-radius:6px;padding:2rem;
+  transition:all 0.3s;position:relative;
+  display:flex;flex-direction:column;
+}
+.project-card:hover{border-color:rgba(0,255,136,0.35);transform:translateY(-4px);box-shadow:0 24px 48px rgba(0,0,0,0.4)}
+.project-num{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.65rem;color:#334155;
+  letter-spacing:0.15em;margin-bottom:1rem;
+}
+.project-title{font-size:1.15rem;font-weight:700;margin-bottom:0.7rem;line-height:1.3}
+.project-desc{font-size:0.88rem;color:#64748b;line-height:1.65;flex:1;margin-bottom:1.5rem}
+.project-tech{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem}
+.project-links{display:flex;gap:1rem}
+.proj-link{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.72rem;color:#00ff88;letter-spacing:0.1em;
+  display:flex;align-items:center;gap:0.4rem;
+  transition:gap 0.2s;
+}
+.proj-link:hover{gap:0.7rem}
+.project-card.featured{
+  border-color:rgba(0,255,136,0.2);
+  background:linear-gradient(135deg,#0d1117,#0f1a10);
+}
+.featured-badge{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.62rem;letter-spacing:0.12em;
+  text-transform:uppercase;padding:0.2rem 0.6rem;
+  background:rgba(0,255,136,0.12);color:#00ff88;
+  border-radius:2px;display:inline-block;margin-bottom:0.8rem;
+}
+
+/* ─── STACK SECTION ─────────────────────────────────────── */
+#stack{background:rgba(0,0,0,0.3)}
+.stack-groups{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.stack-group h3{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.7rem;color:#00ff88;
+  letter-spacing:0.15em;text-transform:uppercase;
+  margin-bottom:1.2rem;padding-bottom:0.6rem;
+  border-bottom:1px solid rgba(0,255,136,0.15);
+}
+.stack-items{display:flex;flex-direction:column;gap:0.5rem}
+.stack-item{
+  display:flex;align-items:center;gap:0.7rem;
+  font-size:0.85rem;color:#94a3b8;
+  padding:0.4rem 0;
+}
+.stack-item::before{content:'';width:4px;height:4px;background:#00ff88;border-radius:50%;flex-shrink:0}
+
+/* ─── CONTACT ───────────────────────────────────────────── */
+#contact{border-top:1px solid rgba(0,255,136,0.06)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:2rem}
+.contact-item{
+  display:flex;gap:1rem;align-items:flex-start;
+  padding:1.2rem;border:1px solid rgba(0,255,136,0.08);
+  border-radius:4px;background:#0d1117;
+  transition:border-color 0.2s;
+}
+.contact-item:hover{border-color:rgba(0,255,136,0.25)}
+.contact-icon{
+  width:40px;height:40px;flex-shrink:0;
+  background:rgba(0,255,136,0.08);border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;
+}
+.contact-text{display:flex;flex-direction:column;gap:0.2rem}
+.contact-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.65rem;color:#475569;
+  letter-spacing:0.12em;text-transform:uppercase;
+}
+.contact-val{font-size:0.92rem;color:#e2e8f0;transition:color 0.2s}
+.contact-item:hover .contact-val{color:#00ff88}
+.social-links{display:flex;gap:1rem;margin-top:1rem}
+.social-link{
+  width:40px;height:40px;border:1px solid rgba(0,255,136,0.15);
+  border-radius:4px;display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;transition:all 0.2s;
+}
+.social-link:hover{border-color:#00ff88;background:rgba(0,255,136,0.08);transform:translateY(-2px)}
+
+/* Contact form */
+.contact-form{display:flex;flex-direction:column;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:0.4rem}
+.form-group label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.7rem;color:#475569;
+  letter-spacing:0.1em;text-transform:uppercase;
+}
+.form-group input,
+.form-group textarea{
+  background:#0d1117;border:1px solid rgba(0,255,136,0.12);
+  border-radius:4px;padding:0.8rem 1rem;
+  color:#e2e8f0;font-family:'Syne',sans-serif;
+  font-size:0.9rem;resize:none;
+  transition:border-color 0.2s,box-shadow 0.2s;
+  outline:none;
+}
+.form-group input:focus,
+.form-group textarea:focus{
+  border-color:#00ff88;
+  box-shadow:0 0 0 3px rgba(0,255,136,0.06);
+}
+.form-group textarea{height:130px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+
+/* ─── FOOTER ────────────────────────────────────────────── */
+footer{
+  border-top:1px solid rgba(0,255,136,0.08);
+  padding:2rem 3rem;
+  display:flex;align-items:center;justify-content:space-between;
+  position:relative;z-index:2;
+}
+.footer-copy{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.72rem;color:#334155;
+  letter-spacing:0.05em;
+}
+.footer-copy span{color:#00ff88}
+.footer-back{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.72rem;color:#475569;
+  display:flex;align-items:center;gap:0.4rem;
+  cursor:none;transition:color 0.2s;background:none;border:none;
+}
+.footer-back:hover{color:#00ff88}
+
+/* ─── ANIMATIONS ────────────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+.reveal-delay-4{transition-delay:0.4s}
+
+/* Floating particles */
+.particles{position:fixed;inset:0;pointer-events:none;z-index:0}
+.particle{
+  position:absolute;width:2px;height:2px;
+  background:#00ff88;border-radius:50%;
+  opacity:0;animation:drift var(--d,8s) var(--delay,0s) ease-in-out infinite;
+}
+@keyframes drift{
+  0%{opacity:0;transform:translateY(100vh) translateX(0)}
+  10%{opacity:0.4}
+  90%{opacity:0.1}
+  100%{opacity:0;transform:translateY(-10vh) translateX(var(--dx,20px))}
+}
+
+/* ─── RESPONSIVE ────────────────────────────────────────── */
+@media(max-width:1024px){
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .stack-groups{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
+  .exp-layout{grid-template-columns:1fr;gap:2rem}
+  .exp-tabs{flex-direction:row;overflow-x:auto;border-left:none;border-bottom:2px solid rgba(255,255,255,0.06)}
+  .exp-tab{border-left:none;border-bottom:2px solid transparent;padding:0.8rem 1.2rem;white-space:nowrap}
+  .exp-tab.active{border-bottom-color:#00ff88;border-left:none;background:none}
+}
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  nav.scrolled{padding:0.8rem 1.5rem}
+  .nav-links{display:none;flex-direction:column;gap:0;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(6,10,15,0.98);padding:5rem 2rem 2rem;align-items:flex-start}
+  .nav-links.open{display:flex}
+  .nav-links a{font-size:1.2rem;padding:1rem 0;border-bottom:1px solid rgba(0,255,136,0.06);width:100%}
+  .nav-cta{display:none}
+  .hamburger{display:flex}
+  #hero{padding:6rem 1.5rem 3rem}
+  section{padding:5rem 1.5rem}
+  .hero-stats{gap:1.5rem;flex-wrap:wrap}
+  .skills-grid{grid-template-columns:1fr}
+  .projects-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr;gap:2rem}
+  .stack-groups{grid-template-columns:1fr 1fr}
+  footer{flex-direction:column;gap:1rem;text-align:center;padding:1.5rem}
+  .form-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Particles -->
+<div class="particles" id="particles"></div>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="nav-logo"><span>~/</span>raghav_kumar_singh</div>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#stack">Stack</a>
+    <a href="#contact">Contact</a>
+    <a href="RAGHAV'S_RESUME.pdf" download class="nav-cta">Resume ↓</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow reveal">Backend Software Engineer</div>
+    <h1 class="hero-name reveal reveal-delay-1">
+      <div class="line1">Raghav</div>
+      <div class="line2">Kumar Singh</div>
+    </h1>
+    <p class="hero-title reveal reveal-delay-2">
+      Ruby on Rails · EV Infrastructure · Payment Systems<span class="blink"></span>
+    </p>
+    <p class="hero-desc reveal reveal-delay-3">
+      Building <strong>mission-critical backend systems</strong> for India's EV charging ecosystem. 
+      Currently architecting OCPP-based charging platforms, dynamic payment pipelines, and real-time 
+      observability at <strong>TruePower by JioThings</strong>.
+    </p>
+    <div class="hero-actions reveal reveal-delay-4">
+      <a href="#projects" class="btn-primary">View Projects →</a>
+      <a href="#contact" class="btn-secondary">Get In Touch</a>
+    </div>
+    <div class="hero-stats reveal reveal-delay-4">
+      <div class="stat-item">
+        <span class="stat-num" data-target="2">0</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="5">0</span>
+        <span class="stat-label">Production Systems</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="0" data-suffix="%" data-revenue="true">0%</span>
+        <span class="stat-label">Revenue Leakage</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="8" data-suffix=".9">0</span>
+        <span class="stat-label">CGPA / 10</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">scroll</div>
 </section>
-<!--================End Home Banner Area =================-->
-        
-<!--================Welcome Area =================-->
-<section class="welcome_area p_120">
-       	<div class="container">
-       		<div class="row welcome_inner">
-       			<div class="col-lg-6">
-       				<div class="welcome_text">
- 					<h4>About Myself</h4>
- 				<p>“People would describe me as a good communicator, not just because I speak well but because I’m a great listener, as well. I pay attention to what clients and colleagues are saying, and I notice what they aren’t saying. I’m able to pick up on things quickly, and I can figure out what people need through their body language and other subtle hints. In fact, people have told me before that I seem to know them better than they know themselves!”</p>
-        			<div class="col-lg-6">
-        			<div class="tools_expert">
-        			<div class="skill_main">
-				<div class="skill_item">
-					<h4>Core JAVA <span class="counter">95</span>%</h4>
-					<div class="progress_br">
-					<div class="progress">
-					<div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-					</div>
-					</div>
-					</div>
-				<div class="skill_item">
-					<h4>SQL <span class="counter">90</span>%</h4>
-				<div class="progress_br">
-				<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				</div>
-				</div>
-				<div class="skill_item">
-					<h4>C <span class="counter">70</span>%</h4>
-				<div class="progress_br">
-				<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				</div>
-				</div>
-				<div class="skill_item">
-					<h4>Linux<span class="counter">85</span>%</h4>
-				<div class="progress_br">
-				<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				</div>
-				</div>
-					</div>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Welcome Area =================-->
-        
-        
-   
-        <!--================Home Gallery Area =================-->
-        <section class="home_gallery_area p_120">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>My Latest Featured Projects</h2>
-        			<p>Who are in extremely love with eco friendly system.</p>
-        		</div>
-        	</div>
-        	<div class="container">
-        		<div class="gallery_f_inner row imageGallery1">
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul design print">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-1.png" alt="">
-        						<a class="light" href="img/gallery/project-1.png"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>Job Portal</h4>
-        						<p>College Project</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul creative">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-2.png" alt="">
-        						<a class="light" href="img/gallery/project-2.png"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>MARKSHEET</h4>
-        						<p>College Project</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 manipul creative design print">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-3.png" alt="">
-        						<a class="light" href="img/gallery/project-3.png"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>Job Finder</h4>
-        						<p>College Project</p>
-        					</div>
-        				</div>
-        			</div>
-        		<div class="more_btn">
-        			<a class="main_btn" href="#">Load More Items</a>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Home Gallery Area =================-->    
-        <!--================Footer Area =================-->
-        <footer class="footer_area p_120">
-        	<div class="container">
-        		<div class="row footer_inner">
-        			<div class="col-lg-5 col-sm-6">
-        				<aside class="f_widget ab_widget">
-<p>Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, more successful you will Be<i class="fa fa-heart-o" aria-hidden="true"></i>.</p>
-	<!-- Link back to Raghav-->
-<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <br/><i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#" target="_blank">RAGHAV KUMAR SINGH</a>
-</p>
-        				</aside>
-        			</div>
-        			<div class="col-lg-2">
-        				<aside class="f_widget social_widget">
-        					<div class="f_title">
-        						<h3>Follow Me</h3>
-        					</div>
-        					<p>Let us be social</p>
-        					<ul class="list">
-        			<li><a href="https://www.facebook.com/profile.php?id=100035442340828"><i class="fa fa-facebook"></i></a></li>
-				<li><a href="https://twitter.com/MrRaghavKumar"><i class="fa fa-twitter"></i></a></li>
-				<li><a href="https://www.linkedin.com/in/raghav-kumar-singh-039a17242/"><i class="fa fa-linkedin"></i></a></li>
-        					</ul>
-        				</aside>
-        			</div>
-        		</div>
-        	</div>
-        </footer>
-        <!--================End Footer Area =================-->
-        
-        
-        
-        
-        
-        
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/stellar.js"></script>
-        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-        <script src="vendors/isotope/isotope.pkgd.min.js"></script>
-        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
-        <script src="js/jquery.ajaxchimp.min.js"></script>
-        <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-        <script src="vendors/counter-up/jquery.counterup.min.js"></script>
-        <script src="js/mail-script.js"></script>
-        <script src="js/theme.js"></script>
-    </body>
+
+<div style="padding:0 3rem;position:relative;z-index:2"><div class="divider"></div></div>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label reveal">About</div>
+    <h2 class="section-title reveal reveal-delay-1">Architecting the<br/>backbone of EVs</h2>
+    <div class="about-grid">
+      <div class="about-text reveal reveal-delay-2">
+        <p>
+          I'm a backend engineer with 2+ years of production experience crafting the invisible infrastructure that makes things work — 
+          <strong>APIs that never sleep, payment pipelines that never leak, and charging sessions that just work</strong>.
+        </p>
+        <p>
+          At <strong>Enercent Technologies (TruePower by JioThings)</strong>, I architect backend services that power India's leading EV charging 
+          platform — from the OCPP handshake when a charger boots up, to the UPI QR scan that settles a transaction, 
+          to the Elasticsearch dashboard showing real-time charger health.
+        </p>
+        <p>
+          I think in systems: how does data flow, where can it break, how do we reconcile when it does? 
+          My background spans <strong>IoT protocol implementation, microservices design, billing engine architecture, 
+          and webhook-based event systems</strong>.
+        </p>
+        <div class="about-tags">
+          <span class="tag">OCPP 1.6J</span>
+          <span class="tag">REST API Design</span>
+          <span class="tag">Payment Reconciliation</span>
+          <span class="tag">RFID Auth</span>
+          <span class="tag">Smart Charging</span>
+          <span class="tag">Microservices</span>
+          <span class="tag">Webhook Systems</span>
+          <span class="tag">EV Infrastructure</span>
+          <span class="tag">Idempotency</span>
+          <span class="tag">Background Jobs</span>
+        </div>
+      </div>
+      <div class="about-right reveal reveal-delay-3">
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="t-dot r"></div>
+            <div class="t-dot y"></div>
+            <div class="t-dot g"></div>
+            <span class="t-title">raghav.rb</span>
+          </div>
+          <div class="terminal-body">
+<span class="t-line"><span class="t-comment"># Who is Raghav?</span></span>
+<span class="t-line">&nbsp;</span>
+<span class="t-line"><span class="t-key">engineer</span> = {</span>
+<span class="t-line">&nbsp;&nbsp;<span class="t-str">name:</span>     <span class="t-val">"Raghav Kumar Singh"</span>,</span>
+<span class="t-line">&nbsp;&nbsp;<span class="t-str">role:</span>     <span class="t-val">"Backend Software Engineer"</span>,</span>
+<span class="t-line">&nbsp;&nbsp;<span class="t-str">location:</span> <span class="t-val">"Bengaluru, India 🇮🇳"</span>,</span>
+<span class="t-line">&nbsp;&nbsp;<span class="t-str">stack:</span>    <span class="t-val">["Ruby on Rails", "PostgreSQL",</span></span>
+<span class="t-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="t-val">"Elasticsearch", "OCPP"]</span>,</span>
+<span class="t-line">&nbsp;&nbsp;<span class="t-str">domain:</span>   <span class="t-val">"EV Charging Infrastructure"</span>,</span>
+<span class="t-line">&nbsp;&nbsp;<span class="t-str">available:</span> <span class="t-green">true</span></span>
+<span class="t-line">}</span>
+<span class="t-line">&nbsp;</span>
+<span class="t-line"><span class="t-comment"># Currently shipping:</span></span>
+<span class="t-line"><span class="t-key">focus</span> = [</span>
+<span class="t-line">&nbsp;&nbsp;<span class="t-val">"Home Charging APIs"</span>,</span>
+<span class="t-line">&nbsp;&nbsp;<span class="t-val">"Billing Engine Optimisation"</span>,</span>
+<span class="t-line">&nbsp;&nbsp;<span class="t-val">"Fleet Management Backend"</span></span>
+<span class="t-line">]</span>
+<span class="t-line">&nbsp;</span>
+<span class="t-line"><span class="t-prompt">></span> <span class="t-cmd">engineer[:available]</span></span>
+<span class="t-line"><span class="t-green">=> true</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="padding:0 3rem;position:relative;z-index:2"><div class="divider"></div></div>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-label reveal">Expertise</div>
+    <h2 class="section-title reveal reveal-delay-1">What I build</h2>
+    <p class="section-sub reveal reveal-delay-2">Production systems that handle real money, real vehicles, and real users — at scale.</p>
+    <div class="skills-grid">
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">⚡</div>
+        <h3>EV Charging Infrastructure</h3>
+        <p>End-to-end OCPP 1.6J session lifecycle — from charger boot to transaction close. Smart charging, RFID auth, pre-booking APIs.</p>
+        <div class="skill-pills">
+          <span class="pill">OCPP 1.6J</span>
+          <span class="pill">WebSockets</span>
+          <span class="pill">RFID</span>
+          <span class="pill">CSMS</span>
+          <span class="pill">Smart Charging</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-icon">💳</div>
+        <h3>Payment Systems</h3>
+        <p>Razorpay Dynamic UPI QR, real-time webhook processing, idempotent reconciliation pipelines. Zero revenue leakage architecture.</p>
+        <div class="skill-pills">
+          <span class="pill">Razorpay</span>
+          <span class="pill">UPI QR</span>
+          <span class="pill">Webhooks</span>
+          <span class="pill">Reconciliation</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-icon">🔌</div>
+        <h3>API Architecture</h3>
+        <p>RESTful API design, microservices, service decomposition. Versioned endpoints, rate limiting, API documentation.</p>
+        <div class="skill-pills">
+          <span class="pill">REST API</span>
+          <span class="pill">Microservices</span>
+          <span class="pill">Postman</span>
+          <span class="pill">OpenAPI</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-icon">🔐</div>
+        <h3>Access Control Systems</h3>
+        <p>Whitelist management for CPOs and fleet operators. RFID/vehicle identifier-based access policies with self-service portals.</p>
+        <div class="skill-pills">
+          <span class="pill">RBAC</span>
+          <span class="pill">Fleet Auth</span>
+          <span class="pill">CPO Systems</span>
+          <span class="pill">Whitelist</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-icon">📊</div>
+        <h3>Observability & Analytics</h3>
+        <p>Elasticsearch-based logging pipelines, real-time operator dashboards, session KPIs, energy consumption trends, fault detection.</p>
+        <div class="skill-pills">
+          <span class="pill">Elasticsearch</span>
+          <span class="pill">Logging</span>
+          <span class="pill">Monitoring</span>
+          <span class="pill">Dashboards</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-3">
+        <div class="skill-icon">⚙️</div>
+        <h3>Billing Engines</h3>
+        <p>Multi-mode billing: time-based, energy-unit, amount-based. Flexible pricing plan management for different host segments.</p>
+        <div class="skill-pills">
+          <span class="pill">Billing</span>
+          <span class="pill">Pricing Plans</span>
+          <span class="pill">Background Jobs</span>
+          <span class="pill">Scheduling</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div style="padding:0 3rem;position:relative;z-index:2"><div class="divider"></div></div>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-label reveal">Experience</div>
+    <h2 class="section-title reveal reveal-delay-1">Where I've worked</h2>
+    <p class="section-sub reveal reveal-delay-2">Building production-grade systems that serve EV consumers, fleet operators, and enterprise clients across India.</p>
+    <div class="exp-layout reveal reveal-delay-3">
+      <div class="exp-tabs" role="tablist">
+        <button class="exp-tab active" onclick="switchTab(0)" role="tab">TruePower</button>
+        <button class="exp-tab" onclick="switchTab(1)" role="tab">Education</button>
+      </div>
+      <div>
+        <div class="exp-panel active" id="tab-0">
+          <div class="exp-company">Enercent Technologies Pvt. Ltd.</div>
+          <div class="exp-role">Backend Software Engineer</div>
+          <div class="exp-period">Mar 2024 – Present · Bengaluru, India</div>
+          <div class="exp-points">
+            <div class="exp-point">Designed and built <strong>RESTful backend services</strong> for TruePower Home Charging — enabling residential EV owners to manage, schedule, and monitor home chargers via the mobile app.</div>
+            <div class="exp-point">Developed the <strong>Whitelist Management System</strong> for enterprise/fleet clients — restricting charger access to authorised RFID/vehicle identifiers with self-service operator portals.</div>
+            <div class="exp-point">Implemented <strong>OCPP 1.6J-compliant charge session lifecycle APIs</strong> — boot, authorisation, start/stop transaction, heartbeat, status notification workflows.</div>
+            <div class="exp-point">Integrated <strong>Razorpay Dynamic UPI QR</strong> payment system — end-to-end from QR generation through webhook-based verification and idempotent reconciliation pipelines.</div>
+            <div class="exp-point">Built a flexible <strong>billing engine</strong> supporting time-based, energy-unit-based, and amount-based pricing — enabling custom plans for different host segments.</div>
+            <div class="exp-point">Engineered <strong>Elasticsearch-based logging and monitoring pipeline</strong> for real-time visibility into session health, charger uptime, and payment events.</div>
+            <div class="exp-point">Developed <strong>pre-booking and advance reservation APIs</strong> — reducing queue wait times and improving utilisation at high-demand commercial stations.</div>
+            <div class="exp-point">Collaborated cross-functionally with firmware, mobile, QA, and client success teams in an <strong>Agile/Scrum</strong> environment from requirement scoping to production rollout.</div>
+          </div>
+        </div>
+        <div class="exp-panel" id="tab-1">
+          <div class="exp-company">CIT Ranchi, Jharkhand University of Technology</div>
+          <div class="exp-role">B.Tech — Computer Science & Engineering</div>
+          <div class="exp-period">2019 – 2023 · CGPA: 8.90 / 10</div>
+          <div class="exp-points">
+            <div class="exp-point">Graduated with <strong>8.90 CGPA</strong> in Computer Science & Engineering — strong foundation in data structures, algorithms, operating systems, and databases.</div>
+            <div class="exp-point">Built college-level projects: <strong>Job Portal</strong>, <strong>Mark Sheet Generator</strong>, and <strong>Job Finder</strong> — hands-on web development and database design experience.</div>
+            <div class="exp-point">Core subjects: <strong>Core Java, SQL, C, Linux</strong> — certified in Core Java via Internshala Trainings.</div>
+            <div class="exp-point">Prior Diploma in Engineering (2017–2020) with 74.74% from XIPT, building strong engineering fundamentals.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="padding:0 3rem;position:relative;z-index:2"><div class="divider"></div></div>
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-label reveal">Projects</div>
+    <h2 class="section-title reveal reveal-delay-1">Things I've built</h2>
+    <p class="section-sub reveal reveal-delay-2">Production systems powering real EV sessions, real payments, and real operators every day.</p>
+    <div class="projects-grid">
+
+      <div class="project-card featured reveal">
+        <span class="featured-badge">★ Featured</span>
+        <div class="project-num">01</div>
+        <div class="project-title">TruePower Home Charging System</div>
+        <div class="project-desc">
+          Backend APIs for the residential EV home charging product — charger onboarding, real-time status, remote start/stop, charge scheduling, and RFID plug-and-play authentication. Deployed in production serving residential EV owners across India.
+        </div>
+        <div class="project-tech">
+          <span class="pill">Ruby on Rails</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">OCPP 1.6J</span>
+          <span class="pill">REST API</span>
+          <span class="pill">RFID</span>
+        </div>
+      </div>
+
+      <div class="project-card featured reveal reveal-delay-1">
+        <span class="featured-badge">★ Featured</span>
+        <div class="project-num">02</div>
+        <div class="project-title">Dynamic UPI QR Payment Integration</div>
+        <div class="project-desc">
+          Real-time payment processing tied directly to active EV charge sessions. Razorpay Dynamic QR generation, idempotent webhook handlers for payment verification, and automated reconciliation pipeline — zero revenue leakage architecture.
+        </div>
+        <div class="project-tech">
+          <span class="pill">Razorpay API</span>
+          <span class="pill">Webhooks</span>
+          <span class="pill">Ruby on Rails</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">Idempotency</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">03</div>
+        <div class="project-title">EV Session Management Platform</div>
+        <div class="project-desc">
+          Full OCPP 1.6J session lifecycle — boot notification, authorisation, transaction start/stop, meter values, and status updates over WebSockets. Pre-booking workflows for advance reservation at high-demand commercial stations.
+        </div>
+        <div class="project-tech">
+          <span class="pill">OCPP 1.6J</span>
+          <span class="pill">WebSockets</span>
+          <span class="pill">Rails</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">Pre-booking</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-num">04</div>
+        <div class="project-title">Whitelist Management System</div>
+        <div class="project-desc">
+          Access-control system for CPOs and enterprise fleet clients. Authorised RFID/vehicle identifier management per charge point or station group. Self-service operator portal for policy management and reduced unauthorised usage incidents.
+        </div>
+        <div class="project-tech">
+          <span class="pill">Ruby on Rails</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">REST API</span>
+          <span class="pill">RBAC</span>
+          <span class="pill">Fleet Ops</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">05</div>
+        <div class="project-title">Elasticsearch Logging Pipeline</div>
+        <div class="project-desc">
+          Webhook-based data ingestion feeding structured event logs into Elasticsearch. Powers operator dashboards with real-time KPIs: session health, payment success rates, charger fault detection, and energy consumption trends.
+        </div>
+        <div class="project-tech">
+          <span class="pill">Elasticsearch</span>
+          <span class="pill">Webhooks</span>
+          <span class="pill">REST</span>
+          <span class="pill">Analytics</span>
+          <span class="pill">Monitoring</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-num">06</div>
+        <div class="project-title">Flexible Billing Engine</div>
+        <div class="project-desc">
+          Multi-mode billing system supporting time-based, energy-unit-based, and amount-based pricing. Enables customised pricing plans for different host segments — residential, commercial, fleet, and enterprise.
+        </div>
+        <div class="project-tech">
+          <span class="pill">Rails</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">Background Jobs</span>
+          <span class="pill">Billing</span>
+          <span class="pill">Scheduling</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div style="padding:0 3rem;position:relative;z-index:2"><div class="divider"></div></div>
+
+<!-- ── FULL STACK ── -->
+<section id="stack">
+  <div class="section-inner">
+    <div class="section-label reveal">Full Stack</div>
+    <h2 class="section-title reveal reveal-delay-1">The complete toolkit</h2>
+    <p class="section-sub reveal reveal-delay-2">Every tool I reach for, and why.</p>
+    <div class="stack-groups reveal reveal-delay-3">
+      <div class="stack-group">
+        <h3>Languages</h3>
+        <div class="stack-items">
+          <div class="stack-item">Ruby</div>
+          <div class="stack-item">Core Java</div>
+          <div class="stack-item">SQL</div>
+          <div class="stack-item">C</div>
+          <div class="stack-item">Bash / Shell</div>
+        </div>
+      </div>
+      <div class="stack-group">
+        <h3>Frameworks & APIs</h3>
+        <div class="stack-items">
+          <div class="stack-item">Ruby on Rails</div>
+          <div class="stack-item">REST API</div>
+          <div class="stack-item">WebSockets</div>
+          <div class="stack-item">OCPP 1.6J</div>
+          <div class="stack-item">Microservices</div>
+        </div>
+      </div>
+      <div class="stack-group">
+        <h3>Databases & Search</h3>
+        <div class="stack-items">
+          <div class="stack-item">PostgreSQL</div>
+          <div class="stack-item">MySQL</div>
+          <div class="stack-item">Elasticsearch</div>
+          <div class="stack-item">Redis (caching)</div>
+          <div class="stack-item">Background Jobs</div>
+        </div>
+      </div>
+      <div class="stack-group">
+        <h3>Tools & DevOps</h3>
+        <div class="stack-items">
+          <div class="stack-item">Git / GitHub</div>
+          <div class="stack-item">Linux</div>
+          <div class="stack-item">Docker (Basic)</div>
+          <div class="stack-item">Postman</div>
+          <div class="stack-item">Jira / Scrum</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="padding:0 3rem;position:relative;z-index:2"><div class="divider"></div></div>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label reveal">Contact</div>
+    <h2 class="section-title reveal reveal-delay-1">Let's work together</h2>
+    <p class="section-sub reveal reveal-delay-2">Open to backend engineering roles in EV/CleanTech, FinTech, or high-scale API platforms. Based in Bengaluru — open to remote.</p>
+    <div class="contact-grid">
+      <div class="contact-info reveal reveal-delay-2">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div class="contact-text">
+            <span class="contact-label">Email</span>
+            <a href="mailto:raghavkrsingh01@gmail.com" class="contact-val">raghavkrsingh01@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div class="contact-text">
+            <span class="contact-label">Phone</span>
+            <a href="tel:+916203929429" class="contact-val">+91 6203929429</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-text">
+            <span class="contact-label">Location</span>
+            <span class="contact-val">Bengaluru, India</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/raghavkrsingh" target="_blank" rel="noopener" class="social-link" title="LinkedIn">in</a>
+          <a href="https://github.com/19csd26" target="_blank" rel="noopener" class="social-link" title="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+          </a>
+          <a href="https://twitter.com/MrRaghavKumar" target="_blank" rel="noopener" class="social-link" title="Twitter/X">𝕏</a>
+          <a href="RAGHAV'S_RESUME.pdf" download class="social-link" title="Download Resume">↓</a>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-3">
+        <div class="terminal" style="margin-bottom:1.5rem">
+          <div class="terminal-bar">
+            <div class="t-dot r"></div><div class="t-dot y"></div><div class="t-dot g"></div>
+            <span class="t-title">send_message.rb</span>
+          </div>
+          <div class="terminal-body" style="padding:1rem 1.5rem">
+<span class="t-line"><span class="t-comment"># Drop me a line</span></span>
+<span class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">curl -X POST /contact</span></span>
+          </div>
+        </div>
+        <div class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Your name" id="cf-name"/>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com" id="cf-email"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" placeholder="What's this about?" id="cf-subject"/>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Tell me about the project or role..." id="cf-message"></textarea>
+          </div>
+          <button class="btn-primary" onclick="handleContact()" style="width:fit-content;cursor:none">Send Message →</button>
+          <div id="cf-status" style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:#00ff88;display:none;margin-top:0.5rem"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-copy">© 2025 <span>Raghav Kumar Singh</span> · Built from scratch · Bengaluru, India</div>
+  <button class="footer-back" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to top</button>
+</footer>
+
+<script>
+/* ── CURSOR ── */
+const cur = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX;my=e.clientY;
+  cur.style.left=mx+'px';cur.style.top=my+'px';
+});
+function animRing(){
+  rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;
+  ring.style.left=rx+'px';ring.style.top=ry+'px';
+  requestAnimationFrame(animRing);
+}
+animRing();
+
+/* ── PARTICLES ── */
+const pContainer=document.getElementById('particles');
+for(let i=0;i<25;i++){
+  const p=document.createElement('div');
+  p.className='particle';
+  p.style.left=Math.random()*100+'vw';
+  p.style.setProperty('--d',(6+Math.random()*10)+'s');
+  p.style.setProperty('--delay',(Math.random()*8)+'s');
+  p.style.setProperty('--dx',(Math.random()*80-40)+'px');
+  pContainer.appendChild(p);
+}
+
+/* ── NAV SCROLL ── */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',window.scrollY>60);
+});
+
+/* ── HAMBURGER ── */
+const ham=document.getElementById('hamburger');
+const navLinks=document.getElementById('navLinks');
+ham.addEventListener('click',()=>{
+  navLinks.classList.toggle('open');
+  const spans=ham.querySelectorAll('span');
+  const open=navLinks.classList.contains('open');
+  spans[0].style.transform=open?'translateY(7px) rotate(45deg)':'';
+  spans[1].style.opacity=open?'0':'1';
+  spans[2].style.transform=open?'translateY(-7px) rotate(-45deg)':'';
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  navLinks.classList.remove('open');
+  ham.querySelectorAll('span').forEach(s=>{s.style.transform='';s.style.opacity='1'});
+}));
+
+/* ── REVEAL ON SCROLL ── */
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+reveals.forEach(el=>obs.observe(el));
+
+/* ── COUNT UP ── */
+function countUp(el,target,suffix='',duration=1600){
+  let start=0;const step=target/60;
+  const timer=setInterval(()=>{
+    start+=step;
+    if(start>=target){start=target;clearInterval(timer);}
+    el.textContent=Math.floor(start)+(suffix||'');
+  },duration/60);
+}
+const statObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el=e.target;
+      const target=parseInt(el.dataset.target)||0;
+      const suffix=el.dataset.suffix||'';
+      if(el.dataset.revenue){el.textContent='0%';return;}
+      countUp(el,target,suffix);
+      statObs.unobserve(el);
+    }
+  });
+},{threshold:0.5});
+document.querySelectorAll('.stat-num').forEach(el=>statObs.observe(el));
+
+/* ── EXP TABS ── */
+function switchTab(idx){
+  document.querySelectorAll('.exp-tab').forEach((t,i)=>{
+    t.classList.toggle('active',i===idx);
+  });
+  document.querySelectorAll('.exp-panel').forEach((p,i)=>{
+    p.classList.toggle('active',i===idx);
+  });
+}
+
+/* ── CONTACT FORM ── */
+function handleContact(){
+  const name=document.getElementById('cf-name').value.trim();
+  const email=document.getElementById('cf-email').value.trim();
+  const subject=document.getElementById('cf-subject').value.trim();
+  const msg=document.getElementById('cf-message').value.trim();
+  const status=document.getElementById('cf-status');
+  if(!name||!email||!msg){
+    status.textContent='> Error: name, email and message required';
+    status.style.color='#f87171';status.style.display='block';return;
+  }
+  const mailto=`mailto:raghavkrsingh01@gmail.com?subject=${encodeURIComponent(subject||'Portfolio Enquiry')}&body=${encodeURIComponent('From: '+name+' <'+email+'>\n\n'+msg)}`;
+  window.location.href=mailto;
+  status.textContent='> Message queued — opening your mail client...';
+  status.style.color='#00ff88';status.style.display='block';
+}
+
+/* ── SMOOTH ACTIVE NAV ── */
+const sections=document.querySelectorAll('section[id]');
+const navA=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  const pos=window.scrollY+120;
+  sections.forEach(s=>{
+    if(pos>=s.offsetTop&&pos<s.offsetTop+s.offsetHeight){
+      navA.forEach(a=>{
+        a.style.color=a.getAttribute('href')==='#'+s.id?'#00ff88':'';
+      });
+    }
+  });
+},{passive:true});
+</script>
+</body>
 </html>
