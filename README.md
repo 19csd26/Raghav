@@ -59,20 +59,6 @@ open index.html          # macOS
 
 ---
 
-## Deploy
-
-Push to `main` — both GitHub Pages and Vercel auto-deploy.
-
-```bash
-git add .
-git commit -m "your message"
-git push origin main
-```
-
-Vercel is configured as a static site (`vercel.json`) — no Node.js build, instant deploy.
-
----
-
 ## Contact
 
 **Raghav Kumar Singh** · Backend Software Engineer · Bengaluru, India
